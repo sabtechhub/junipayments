@@ -8,11 +8,10 @@ if ($privateKey === false) {
     die('Error reading private key file.');
 }
 
-// JWT payload
+// JWT payload without expiration
 $payload = [
     'iss' => 'your_issuer', // Issuer
     'aud' => 'your_audience', // Audience
-    'exp' => time() + 3600, // Expiration time (1 hour from now)
     'sub' => 'your_subject', // Subject
     'payload' => 'payload_example' // Custom payload data
 ];
